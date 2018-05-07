@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mobile</title>
+</head>
+<body>
+    <button id="left">G</button>
+    <button id="right">D</button>
+    <button id="turn">T</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+        document.getElementById('left').addEventListener('click', function() {
+            socket.emit('command', 'left');
+        })
+        document.getElementById('right').addEventListener('click', function() {
+            socket.emit('command', 'right');
+        })
+        document.getElementById('turn').addEventListener('click', function() {
+            socket.emit('command', 'turn');
+        })
+        document.getElementById('down').addEventListener('click', function() {
+            socket.emit('command', 'down');
+        })
+    </script>
+</body>
+</html>
