@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tetris</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -14,17 +14,18 @@
    -->
     <div id="tetris">
         <div id="menu">
-          <p id="start"><a href="javascript:play();">Press Space to Play.</a></p>
+          <p id="start"><a href="javascript:play();">Scannez le QRcode et appuyez sur start.</a></p>
           <p><canvas id="upcoming"></canvas></p>
           <p>score <span id="score">00000</span></p>
-          <p>rows <span id="rows">0</span></p>
+          <p>lignes <span id="rows">0</span></p>
+          <a href='http://www.unitag.io/qrcode'><img src='http://www.unitag.io/qreator/generate?crs=xnjFkEn%252FP85fCPDXJ%252FXXKnPnKU%252FtWVh9E7ei8Ex%252BR4XsTvus59MiRl4OtJ5Y%252F3aR9c4m87G8TZ5lFlJZ8wXZgCC9XHDAZF2FV9xzTzw2Rb7BpzMpvhdTtwXkDJLk%252BVXcvPWbmSSXwvglmrcYMHooMg%253D%253D&crd=fhOysE0g3Bah%252BuqXA7NPQ3SfC%252F2lhk0jVNxkbNEoLkYNF%252BfomtCDzllUduEwy8big%252BJaAzTmepMFZ4wkagtoYA%253D%253D' alt='QR Code'/></a>
         </div>
         <canvas id="canvas">
           Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
         </canvas>
     </div>
 
-    <script src="../js/stats.js"></script>
+    
 
     <script>
 
@@ -57,7 +58,7 @@
     
         var KEY     = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
             DIR     = { UP: 0, RIGHT: 1, DOWN: 2, LEFT: 3, MIN: 0, MAX: 3 },
-            stats   = new Stats(),
+            
             canvas  = get('canvas'),
             ctx     = canvas.getContext('2d'),
             ucanvas = get('upcoming'),
@@ -167,7 +168,7 @@
             now = timestamp();
             update(Math.min(1, (now - last) / 1000.0)); // using requestAnimationFrame have to be able to handle large delta's caused when it 'hibernates' in a background or non-visible tab
             draw();
-            stats.update();
+            
             last = now;
             requestAnimationFrame(frame, canvas);
           }
@@ -179,8 +180,7 @@
         }
     
         function showStats() {
-          stats.domElement.id = 'stats';
-          get('menu').appendChild(stats.domElement);
+         
         }
     
         function addEvents() {
@@ -437,18 +437,19 @@
         var socket = io();
         socket.on('command', function (event) {
             if (event === 'left') {
-                playerMove(-1);
+               // playerMove(-1);
                 move(DIR.LEFT);
             } else if (event === 'right') {
-                playerMove(1);
+               // playerMove(1);
+               move(DIR.RIGHT);
             } else if (event === 'down') {
-                playerDrop();
+                //playerDrop();
                 drop();
             } else if (event === 'turn') {
-                playerRotate(-1);
+               // playerRotate(-1);
                 rotate();
             } else if (event.keyCode === 87) {
-                playerRotate(1);
+                //playerRotate(1);
             }        })
 
       /*  const canvas = document.getElementById('tetris');
