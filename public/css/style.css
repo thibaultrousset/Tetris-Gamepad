@@ -1,0 +1,345 @@
+body {
+    font-family: 'Oswald', sans-serif, cursive;
+    color: #f7f909;
+    height: fit-content;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('../bg-night.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* background-image: url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12c0-.622-.095-1.221-.27-1.785A5.982 5.982 0 0 0 10 12c1.67 0 3.182-.683 4.27-1.785A5.998 5.998 0 0 0 14 12h2a4 4 0 0 1 4-4V6c-1.67 0-3.182.683-4.27 1.785C15.905 7.22 16 6.622 16 6c0-.622-.095-1.221-.27-1.785A5.982 5.982 0 0 0 20 6V4a4 4 0 0 1-4-4h-2c0 .622.095 1.221.27 1.785A5.982 5.982 0 0 0 10 0C8.33 0 6.818.683 5.73 1.785 5.905 1.22 6 .622 6 0H4a4 4 0 0 1-4 4v2c1.67 0 3.182.683 4.27 1.785A5.998 5.998 0 0 1 4 6c0-.622.095-1.221.27-1.785A5.982 5.982 0 0 1 0 6v2a4 4 0 0 1 4 4h2zm-4 0a2 2 0 0 0-2-2v2h2zm16 0a2 2 0 0 1 2-2v2h-2zM0 2a2 2 0 0 0 2-2H0v2zm20 0a2 2 0 0 1-2-2h2v2zm-10 8a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z' fill='%23474747' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E"); */
+    /* background-color: rgb(108, 117, 124); */
+}
+
+.filtre {
+    background: rgba(0, 0, 0, 0.3);
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Bungee Shade', cursive;
+    text-align: center;
+    color: #4dffce;
+    font-size: 4em;
+    margin: 1px 10px;
+}
+
+img {
+    height: 250px;
+    width: 250px
+}
+
+.title-main {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.author {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1em;
+}
+
+#tetris {
+    display: flex;
+   
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#screen {
+    display: inline-block;
+    vertical-align: top;
+    border: 3px solid white;
+    background-color: black;
+}
+
+#canvas {
+    background-color: black;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+}
+
+#menu p {
+    margin: 0.5em 0;
+    text-align: left;
+}
+
+#menu p a {
+    text-decoration: none;
+    color: white;
+}
+
+#menu2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    vertical-align: top;
+    position: relative;
+}
+
+#menu2 p a {
+    text-decoration: none;
+    color: white;
+}
+
+#upcoming {
+    display: inline-block;
+    margin: 0 auto;
+    background-color: black;
+    width: 170px;
+    border: 1px solid white;
+    height: 170px;
+    padding: 2%;
+}
+
+#score {
+    color: white;
+    font-weight: bold;
+    vertical-align: middle;
+    border: 1px solid white;
+}
+
+#rows {
+    color: white;
+    font-weight: bold;
+    vertical-align: middle;
+    border: 1px solid white;
+}
+
+a {
+    text-align: left
+}
+
+p {
+    color: #e5007d;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li p {
+    color: white;
+    text-align: left !important;
+    font-size: 50%
+}
+
+.title {
+    color: white;
+}
+
+.number {
+    width: 170px;
+    padding: 3%;
+    background-color: black;
+}
+
+.scores {
+    width: 170px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.tetriz-title {
+    width: 60px;
+    height: 60px;
+}
+
+@media screen and (min-width: 0px) and (min-height: 0px) {
+    #tetris {
+        font-size: 0.75em;
+        width: 100%;
+    }
+    #menu {
+        width: 100px;
+        height: 200px;
+    }
+    #menu2 {
+        width: 100px;
+        height: 200px;
+    }
+    #screen {
+        width: 150px;
+        height: 250px;
+    }
+}
+
+/* 10px chunks */
+
+@media screen and (min-width: 400px) and (min-height: 400px) {
+    #tetris {
+        font-size: 1.00em;
+        width: 100%;
+    }
+    #menu {
+        width: 150px;
+        height: 300px;
+    }
+    #menu2 {
+        width: 150px;
+        height: 300px;
+    }
+    #screen {
+        width: 200px;
+        height: 350px;
+    }
+}
+
+/* 15px chunks */
+
+@media screen and (min-width: 500px) and (min-height: 500px) {
+    #tetris {
+        font-size: 1.25em;
+        width: 100%;
+    }
+    #menu {
+        width: 200px;
+        height: 400px;
+    }
+    #menu2 {
+        width: 200px;
+        height: 400px;
+    }
+    #screen {
+        width: 250px;
+        height: 450px;
+    }
+}
+
+/* 20px chunks */
+
+@media screen and (min-width: 600px) and (min-height: 600px) {
+    #tetris {
+        font-size: 1.50em;
+        width: 100%;
+    }
+    #menu {
+        width: 250px;
+        height: 500px;
+    }
+    #menu2 {
+        width: 250px;
+        height: 500px;
+    }
+    #screen {
+        width: 300px;
+        height: 550px;
+    }
+}
+
+/* 25px chunks */
+
+@media screen and (min-width: 700px) and (min-height: 700px) {
+    #tetris {
+        font-size: 1.75em;
+        width: 100%;
+    }
+    #menu {
+        width: 300px;
+        height: 600px;
+    }
+    #menu2 {
+        width: 300px;
+        height: 600px;
+    }
+    #screen {
+        width: 350px;
+        height: 650px;
+    }
+}
+
+/* 30px chunks */
+
+@media screen and (min-width: 800px) and (min-height: 800px) {
+    #tetris {
+        font-size: 2.00em;
+        width: 100%;
+    }
+    #menu {
+        width: 350px;
+        height: 700px;
+    }
+    #menu2 {
+        width: 350px;
+        height: 700px;
+    }
+    #screen {
+        width: 400px;
+        height: 750px;
+    }
+}
+
+/* 35px chunks */
+
+@media screen and (min-width: 900px) and (min-height: 900px) {
+    #tetris {
+        font-size: 2.25em;
+        width: 100%;
+    }
+    #menu {
+        width: 400px;
+        height: 800px;
+    }
+    #menu2 {
+        width: 400px;
+        height: 800px;
+    }
+    #screen {
+        width: 450px;
+        height: 850px;
+    }
+}
+
+/* 40px chunks */
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2A65B0;
+    border: 0px none #2A65B0;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4c88e8;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #4a7ccc;
+}
+
+::-webkit-scrollbar-track {
+    background: #132A54;
+    border: 0px none #132A54;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #132A54;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #060F1D;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
