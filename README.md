@@ -4,25 +4,28 @@ tetris game url : 13.93.104.26:2758/t
 game-pad url : 13.93.104.26:2758/m
 
 The FlashCode on the Tetris game redirect to the game-pad url.
-This way you can play on our tetris with your smartphone as a gamepad without software uploawding
 
-Tetris Presentation
+# Tetriz + Game-pad
 
-Site of presentation of Tetris' project developped for the Afterwork4 of the Passarelle Numérique at École Centrale de Marseille, Marseille - France.
-Link
+Your phone is your gamepad
 
-https://amcossu.github.io/Tetris/
-Authors
+## Deployment
 
-    Julie Cervera - JulieCervera
+Just play !
 
-    Amanda Cossu - amcossu
+* [Gamepad](http://13.93.104.26:2758/m) - Gamepad for smarthphone
+* [Tetriz](http://13.93.104.26:2758/t) - Tetriz on your computer
 
-    Thibault Rousset - thibaultrousset
+## Built With
 
-    Florian Sanchez - FlorianSanchez
+* JavaScript
+* [Socket.io](https://github.com/socketio/socket.io) - Realtime application framework (Node.JS server)
 
+## Authors
 
+* **Amanda cossu** - [amcossu](https://github.com/amcossu)
+* **Julie cervera** - [JulieCervera](https://github.com/JulieCervera)
+* **Thibault rousset** - [thibaultrousset](https://github.com/thibaultrousset)
 
 
 
